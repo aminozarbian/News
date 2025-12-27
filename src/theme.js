@@ -1,14 +1,12 @@
 import { createTheme } from '@mui/material/styles';
 
 // Shared theme used by both the app and Toolpad components.
-// Uses MUI's CSS variables + color schemes so we can toggle light/dark via `useColorScheme()`.
 export const appTheme = createTheme({
   direction: 'rtl',
   typography: {
     fontFamily: 'Iransans , Roboto',
   },
   cssVariables: {
-    // Default selector used by MUI's color scheme system (kept explicit for clarity).
     colorSchemeSelector: 'data-mui-color-scheme',
   },
   colorSchemes: {

@@ -76,7 +76,7 @@ function RenderHTML({ html }) {
 export default async function Home() {
   const newsList = await getNews();
 
-  // 1. Find the Hero Item (Prioritize isHeader, then isMain, then editorSelection)
+  // 1. Find the isHeader Item (Prioritize isHeader, then isMain, then editorSelection)
   let heroItem = newsList.find(n => n.isHeader);
 
   if (!heroItem) {
@@ -89,7 +89,7 @@ export default async function Home() {
     heroItem = newsList[0];
   }
 
-  // 2. Find Sub-Hero Items (Next 4 items, excluding hero)
+  // 2. Find isMain Items (Next 4 items, excluding hero)
   const subHeroItems = newsList
     .filter(n => n._id !== heroItem?._id && n.isMain)
     .slice(0, 4);
@@ -133,7 +133,6 @@ export default async function Home() {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                // Further reduced opacity on the right side
                 background: 'linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 80%), linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 30%)',
               }
             }}
@@ -275,10 +274,6 @@ export default async function Home() {
                   <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', pl: 2 }}>
                     <Typography variant="h6" component="div" fontWeight="bold" sx={{ mb: 1, color: 'text.primary' }}>
                       {news.title}
-                    </Typography>
-
-                    <Typography variant="body2" sx={{ color: 'text.secondary', height: 60, overflow: 'hidden' }} component="div">
-                      <RenderHTML html={news.content} />
                     </Typography>
 
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, color: 'text.secondary', fontSize: '0.875rem' }}>
