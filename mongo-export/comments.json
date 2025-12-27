@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "695003a1df0f27c2d05bc710",
+    "newsId": "694fdcae4b6b0a3f63b05c60",
+    "userId": "694bd875ef65f166af11c2fe",
+    "content": "به نظرم بهتر میتوتست باشه",
+    "createdAt": "2025-12-27T16:04:49.015Z",
+    "__v": 0
+  },
+  {
+    "_id": "69500a52df0f27c2d05bc7ae",
+    "newsId": "694ff2f7df0f27c2d05bc68b",
+    "userId": "694bd875ef65f166af11c2fe",
+    "content": "یک دیدگاه",
+    "createdAt": "2025-12-27T16:33:22.803Z",
+    "__v": 0
+  },
+  {
+    "_id": "69500b06df0f27c2d05bc7c6",
+    "newsId": "694fd0394b6b0a3f63b05beb",
+    "userId": "694bd875ef65f166af11c2fe",
+    "content": "hello",
+    "createdAt": "2025-12-27T16:36:22.737Z",
+    "__v": 0
+  }
+]
